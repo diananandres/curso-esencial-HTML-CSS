@@ -84,6 +84,14 @@ pre{
   width: 100%;
 }
 
+.section-content h3::after{
+   content: '';
+   width: 32px;
+   height: 4px;
+   background: #424242;
+   display: block;
+}
+
 .section-content{
   counter-reset: titlelist;
 }
@@ -92,13 +100,5 @@ pre{
 }
 
 .section-content h3::before{
-  content: '' counter(titlelist, decimal) '.';
-}
-
-.section-content h3::after{
-   content: '';
-   width: 32px;
-   height: 4px;
-   background: #424242;
-   display: block;
+   content: '' counter(titlelist, decimal) '.';
 }

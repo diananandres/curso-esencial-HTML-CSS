@@ -36,6 +36,14 @@
 body{
   color: var(--gray30);
   font-family: 'Roboto', sans-serif;
+  margin: 0;
+}
+
+h1 + p {
+  margin-bottom: 64px;
+}
+hr{
+ margin: 64px 0;
 }
 
 a{
@@ -60,14 +68,21 @@ nav details summary{
 
 h1{
   font-size: 60px;
+  margin-top: 64px;
+  margin-bottom: 16px;
+  margin-right: 52px;
+  margin-left: 348px;
 }
 
 h2{
   font-size: 2em;
+  margin: 40px 0;
 }
 
 h3{
   font-size: 1.5em;
+  margin-top: 16px;
+  margin-bottom: 24px;
 }
 pre{
   background:#FEC62E ;
@@ -84,6 +99,14 @@ pre{
   width: 100%;
 }
 
+.section-content h3::after{
+   content: '';
+   width: 32px;
+   height: 4px;
+   background: #424242;
+   display: block;
+}
+
 .section-content{
   counter-reset: titlelist;
 }
@@ -92,13 +115,5 @@ pre{
 }
 
 .section-content h3::before{
-  content: '' counter(titlelist, decimal) '.';
-}
-
-.section-content h3::after{
-   content: '';
-   width: 32px;
-   height: 4px;
-   background: #424242;
-   display: block;
+   content: '' counter(titlelist, decimal) '.';
 }
