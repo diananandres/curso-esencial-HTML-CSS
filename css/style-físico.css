@@ -33,15 +33,16 @@
   --gray10: #616161;
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 body{
   color: var(--gray30);
   font-family: 'Roboto', sans-serif;
   margin: 0;
 }
 
-h1 + p {
-  margin-bottom: 64px;
-}
 hr{
  margin: 64px 0;
 }
@@ -52,6 +53,12 @@ a{
 header{
   font-size: 14px;
   color: var(--gray10);
+  position: absolute;
+  top: 64px;
+  left: -232px;
+  width: 188px;
+  z-index: 1;
+
 
 }
 header a{
@@ -64,14 +71,20 @@ header a :hover{
 
 nav details summary{
   font-weight: bold;
+  line-height: 24px;
+}
+
+header li{
+  margin-bottom: 16px;
 }
 
 h1{
-  font-size: 60px;
+  font-size: 50px;
   margin-top: 64px;
   margin-bottom: 16px;
-  margin-right: 52px;
-  margin-left: 348px;
+  margin-right: 20px;
+  margin-left: 120px;
+  font-weight: normal;
 }
 
 h2{
@@ -85,13 +98,55 @@ h3{
   margin-top: 16px;
   margin-bottom: 24px;
   font-weight: normal;
+  position: sticky;
+  top: 0;
+  background: white;
 }
 pre{
   background:#FEC62E ;
+  padding: 40px;
+  font-family: 'Roboto';
+  line-height: 24px;
 }
 
 blockquote{
+  font-size: 24px;
   margin: 32px 0;
+  padding-left: 16px;
+  line-height: 24px;
+  border-left: 4px solid #212121;
+}
+blockquote span{
+ color: var(--gray10);
+}
+
+blockquote span ::before{
+  content: '-';
+}
+
+.header{
+  position:sticky;
+  top:0;
+}
+
+.header-content{
+  position: relative;
+}
+
+.main{
+  border: 1px solid;
+
+}
+
+.wrapper{
+  width:902px ;
+  margin: auto;
+  padding: 0px;
+}
+
+.main-content {
+  background: white;
+
 }
 
 .hero{
@@ -124,16 +179,27 @@ margin: 0;
   width: 100%;
 }
 
+#image-modelo{
+  width: 100%;
+}
+
+#image-css{
+  width: 100%;
+}
+
 .section-content img{
   margin-top: 40px;
 }
 
 .section-content h3::after{
    content: '';
-   width: 32px;
+   width: 80px;
    height: 4px;
    background: #424242;
    display: block;
+   position: absolute;
+   left: 0;
+   bottom: 0;
 }
 
 .section-content{
@@ -141,8 +207,9 @@ margin: 0;
 }
 .section-content h3 {
   counter-increment: titlelist;
+  padding-bottom: 8px;
 }
 
 .section-content h3::before{
-   content: '' counter(titlelist, decimal) '.';
+   content: '' counter(titlelist, decimal) '. ';
 }
