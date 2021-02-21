@@ -26,32 +26,34 @@
   font-weight:bold;
 }
 
-: :root{
+:root{
   font-size: 18px;
-  --gray30: #212121;
-  --gray20: #212429;
-  --gray10: #616161;
+  --white30: white;
+  --white20: #212429;
+  --white10: #616161;
 }
 
 body{
-  color: var(--gray30);
+  color: var(--white30);
   font-family: 'Roboto', sans-serif;
+  background: #251F24;
+  margin: 0;
 }
 
 a{
-  color: var(--gray30);
+  color: var(--white30);
 }
 header{
   font-size: 14px;
-  color: var(--gray10);
+  color: var(--white10);
 
 }
 header a{
-  color: var(--gray10);
+  color: var(--white10);
   text-decoration: none;
 }
 header a :hover{
-  color: var(--gray30);
+  color: var(--white30);
 }
 
 nav details summary{
@@ -81,6 +83,14 @@ pre{
 
 }
 #image-dom{
+  width: 100%;
+}
+
+#image-modelo{
+  width: 100%;
+}
+
+#image-css{
   width: 100%;
 }
 
