@@ -66,26 +66,72 @@ nav details summary{
 
 h1{
   font-size: 60px;
-  font-weight: normal;
+  font-weight: bold;
+  margin-block-start: 64px;
+  margin-block-end: 16px;
 }
 
 h2{
   font-size: 2em;
-  font-weight: normal;
+  font-weight: bold;
+  margin-block: 40px;
 }
 
 h3{
   font-size: 1.5em;
-  font-weight: normal;
+  font-weight:600;
+  margin-block: 16px;
 }
+
+hr{
+  margin-block: 40px;
+  border-color: rgba(97, 97, 97, 0.2);
+}
+
 pre{
   background:var(--white10) ;
+  padding: 40px;
+  overflow: auto;
+  border-radius: 8px;
 }
 
 p{
   color: var(--white20);
 }
 
+blockquote{
+  margin-block-start: 80px;
+  margin-block-end: 63px;
+  background-color: var(--white10);
+  border-radius: 8px;
+  line-height: 32px;
+  font-size: 24px;
+  padding-inline-end: 24px;
+  padding-inline-start: 24px;
+  padding-block-start: 24px;
+  padding-block-end: 24px;
+}
+
+blockquote p {
+  color: var(--white30);
+}
+
+.main hr{
+  display: none;
+}
+
+.main{
+
+}
+
+.wrapper{
+  max-inline-size: 902px;
+  margin: auto;
+}
+
+.main-content{
+  padding-inline: 16px;
+}
 .hero{
   background-image:linear-gradient(96.07deg, #314755 30.63%, #26A0DA 102.18%);
   background-position: relative;
@@ -105,13 +151,17 @@ p{
   width: 100%;
 }
 
-.section-content h3::after{
+.section-content img {
+  margin-block-start: 40px;
+  display: block;
+}
+/*.section-content h3::after{
    content: '';
    width: 32px;
    height: 4px;
    background: #424242;
    display: block;
-}
+}*/
 
 .section-content{
   counter-reset: titlelist;
@@ -121,5 +171,5 @@ p{
 }
 
 .section-content h3::before{
-   content: '' counter(titlelist, decimal) '.';
+   content: '' counter(titlelist, decimal) '. ';
 }
