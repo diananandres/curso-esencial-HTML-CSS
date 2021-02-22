@@ -43,14 +43,29 @@ body{
 a{
   color: var(--white30);
 }
+
+.header-content{
+  position: relative;
+  inset-block-start: 65px;
+}
+
+.header{
+  position: sticky;
+  inset-block-start: -45px;
+}
+
 header{
   font-size: 14px;
   color: var(--white);
-
+  position: absolute;
+  inset-block-start: 0px;
+  inset-inline-start: -208px;
+  inline-size: 188px;
 }
 
 header li{
   color: #A5A3A5;
+  margin-block-end: 16px;
 }
 header a{
   color: var(--white20);
@@ -93,6 +108,9 @@ pre{
   padding: 40px;
   overflow: auto;
   border-radius: 8px;
+  border: 10px solid #5551FF;
+  box-shadow: -10px 10px 0 0 #ABAAF6;
+  margin-block-end: 40px;
 }
 
 p{
@@ -172,4 +190,28 @@ blockquote p {
 
 .section-content h3::before{
    content: '' counter(titlelist, decimal) '. ';
+}
+
+.form input{
+  inline-size: 100%;
+  box-sizing: border-box;
+  border: 1px solid var(--white30);
+  background: var(--white10);
+  border-radius: 8px;
+  padding-inline:16px ;
+  padding-block: 12px;
+  color: var(--white30);
+  font-size: 16px;
+  display: block;
+  margin-block-end:24px;
+}
+
+.form input[type="submit"] {
+  background: #157EFB;
+  border:none;
+}
+
+
+.form input ::-webkit-input-placeholder{
+  color: var(--white20);
 }
